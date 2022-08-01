@@ -1,22 +1,35 @@
 console.log ("Hello World")
 ;
 
-var choices = ["Rock", "Paper", "Scissors"]
+var choices = ["ROCK", "PAPER", "SCISSORS"]
+console.log (choices)
+//var playerChoice = prompt ("Please enter either Rock, Paper or Scissors")
+
+//console.log (playerChoice) //this is how to console log
 
 function myComputerChoice() {
     let result = [Math.floor(Math.random()*choices.length)]; //assigning variable result to randomise the length of the array; returning an int of the array
-    return choices[result]; //this returns the string instead of interger
+    return choices[result]; //this returns the string value instead of interger
 }
 
-function playerSelection () {
-    let choice = prompt ("Please enter your choice", "");//create a prompt asking for input from the user when function is run
-    if (choice === choices) { //this is to check if the input tallies with the array before executing the lines; should this be outside the function then?
-        
+
+function playerSelection () { //the function should make the result of the prompt case insensitive and camelcase insensitive
+    var playerChoice = prompt ("Please enter your choice"); //create a prompt asking for input from the user when function is run
+    var result = playerChoice.toString().toUpperCase(); //effectively converting all sorts of styles into a simple lowercase, so accepted all, then must change to return all the array choices to
+    return result;
+}
+
+
+function playRound(playerSelection, myComputerChoice){
+    if (playerSelection==myComputerChoice){
+        alert ("It's a Tie!");
     }
-
-}
-
-
+    else if (playerSelection=="ROCK"&&myComputerChoice=="SCISSORS" || playerSelection=="PAPER"&&myComputerChoice=="ROCK" || playerSelection=="SCISSORS"&&myComputerChoice=="PAPER") {
+            alert ("Player has Won!");}
+        else {
+            alert ("computer has won!")
+        }
+    }
 
 //function myComputerChoice () {
 //    return [Math.floor(Math.random()*rps.length)]; 
