@@ -21,15 +21,23 @@ function playerSelection () { //the function should make the result of the promp
 
 
 function playRound(playerSelection, myComputerChoice){
-    if (playerSelection==myComputerChoice){
-        alert ("It's a Tie!");
-    }
-    else if (playerSelection=="ROCK"&&myComputerChoice=="SCISSORS" || playerSelection=="PAPER"&&myComputerChoice=="ROCK" || playerSelection=="SCISSORS"&&myComputerChoice=="PAPER") {
-            alert ("Player has Won!");}
-        else {
-            alert ("computer has won!")
+        if (playerSelection==myComputerChoice){
+            return ("It's a Tie!");
         }
+        else if (playerSelection=="ROCK"&&myComputerChoice=="SCISSORS" || playerSelection=="PAPER"&&myComputerChoice=="ROCK" || playerSelection=="SCISSORS"&&myComputerChoice=="PAPER") {
+                return ("Player has Won!");}
+            else {
+                return ("computer has won!")
+            }
+        }
+
+function game () {
+    const result = playRound(playerSelection,myComputerChoice)
+    {for (let i= 0; )
+        
     }
+}
+
 
 //function myComputerChoice () {
 //    return [Math.floor(Math.random()*rps.length)]; 
