@@ -14,28 +14,28 @@ function myComputerChoice() {
 
 
 function playerSelection () { //the function should make the result of the prompt case insensitive and camelcase insensitive
-    var playerChoice = prompt ("Please enter your choice"); //create a prompt asking for input from the user when function is run
-    var result = playerChoice.toString().toUpperCase(); //effectively converting all sorts of styles into a simple lowercase, so accepted all, then must change to return all the array choices to
-    return result;
+  var playerChoice = prompt ("Please enter your choice"); //create a prompt asking for input from the user when function is run
+  var result = playerChoice.toString().toUpperCase(); //effectively converting all sorts of styles into a simple lowercase, so accepted all, then must change to return all the array choices to
+  return result;
 }
-
 
 function playRound(playerSelection, myComputerChoice){
         if (playerSelection==myComputerChoice){
-            return ("It's a Tie!");
+            return "Tie"
         }
         else if (playerSelection=="ROCK"&&myComputerChoice=="SCISSORS" || playerSelection=="PAPER"&&myComputerChoice=="ROCK" || playerSelection=="SCISSORS"&&myComputerChoice=="PAPER") {
-                return ("Player has Won!");}
+                return ("Player wins the round");}
             else {
-                return ("computer has won!")
+                return ("Computer wins the round!")
             }
-        }
+   
+}
 
-function game () {
-    const result = playRound(playerSelection,myComputerChoice)
-    {for (let i= 0; )
-        
+function game ()
+    {for (let i= 0; i<5; i++){
+playRound(playerSelection(),myComputerChoice()) // but this just returns undefined instead of the return values above, what's with that?
     }
+    if (score > 3) //how to start scoring it? write a keep score function?
 }
 
 
