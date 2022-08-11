@@ -1,7 +1,7 @@
 console.log ("Hello World")
 ;
 
-var x = Player_Score = 0;
+var x = Player_Score = 0; 
 //var x = 0;
 var y = Computer_Score = 0;
 //var y = 0
@@ -30,7 +30,7 @@ function playRound(playerSelection, myComputerChoice){
         }
         else if (playerSelection=="ROCK"&&myComputerChoice=="SCISSORS" || playerSelection=="PAPER"&&myComputerChoice=="ROCK" || playerSelection=="SCISSORS"&&myComputerChoice=="PAPER") {
                 console.log (x)
-                return ("Player wins the round" && x+1);}
+                return ("Player wins the round" && x+1);} // it is just returning 0 , do i have to specify the variable to be an int before adding, or is it not as simple as a +1, there's another expression for compounding the add?
             else {
                 console.log (y)
                 return ("Computer wins the round!" && y+1)
