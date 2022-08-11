@@ -1,6 +1,11 @@
 console.log ("Hello World")
 ;
 
+var x = Player_Score = 0;
+//var x = 0;
+var y = Computer_Score = 0;
+//var y = 0
+
 var choices = ["ROCK", "PAPER", "SCISSORS"]
 console.log (choices)
 //var playerChoice = prompt ("Please enter either Rock, Paper or Scissors")
@@ -24,19 +29,35 @@ function playRound(playerSelection, myComputerChoice){
             return "Tie"
         }
         else if (playerSelection=="ROCK"&&myComputerChoice=="SCISSORS" || playerSelection=="PAPER"&&myComputerChoice=="ROCK" || playerSelection=="SCISSORS"&&myComputerChoice=="PAPER") {
-                return ("Player wins the round");}
+                console.log (x)
+                return ("Player wins the round" && x+1);}
             else {
-                return ("Computer wins the round!")
+                console.log (y)
+                return ("Computer wins the round!" && y+1)
             }
    
+}
+function playerScore (){
+    var scoring = playRound
+    //for every time it returns "Player wins the round" count towards this variable?
+    //we need to change the string to an interger to keep score
 }
 
 function game ()
     {for (let i= 0; i<5; i++){
 playRound(playerSelection(),myComputerChoice()) // but this just returns undefined instead of the return values above, what's with that?
     }
-    if (score > 3) //how to start scoring it? write a keep score function?
-}
+    if (x > 3){
+        return "Player has won the game!"
+    } //how to start scoring it? write a keep score function?
+    else{
+        return "Computer has won the game!"
+    }
+    //else if (playerScore=ComputerScore){
+        //replay the loop until a player has won 
+    }
+
+//https://stackoverflow.com/questions/71590630/rock-paper-scissors-game-prompt-loop-and-scoreboard
 
 
 //function myComputerChoice () {
